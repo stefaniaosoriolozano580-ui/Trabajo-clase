@@ -1,50 +1,83 @@
-<section class="presentacion">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Armada Nacional</title>
+    <link rel="stylesheet" href="../Static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Armada Nacional de Colombia</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li><a href="misiones.html">Misión y Visión</a></li>
+                <li><a href="flota.html">Flota Naval</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="texto">
+    <main>
+        <h2>Contacto e Incorporación</h2>
+        
+        <div class="contacto-grid">
+            <div class="info">
+                <h3>📍 Sede Principal</h3>
+                <p><strong>Dirección:</strong> Carrera 54 #26-25 CAN, Bogotá D.C., Colombia</p>
+                <p><strong>PBX:</strong> (601) 426 1000</p>
+                <p><strong>Línea Gratuita Nacional:</strong> 01 8000 919 434</p>
+                <p><strong>Email:</strong> contactenos@armada.mil.co</p>
+                <p><strong>Horario Atención Ciudadano:</strong> Lunes a Viernes 8:00 a.m. - 5:00 p.m.</p>
+                
+                <h3>⚓ Bases Navales Principales</h3>
+                <p><strong>Cartagena:</strong> Base Naval ARC Bolívar - Caribe</p>
+                <p><strong>Buenaventura:</strong> Base Naval ARC Málaga - Pacífico</p>
+                <p><strong>San Andrés:</strong> Estación de Guardacostas</p>
+                <p><strong>Leticia:</strong> Base Naval ARC Leticia - Amazonía</p>
+                
+                <h3>🎓 ¿Quieres ser parte de la Armada?</h3>
+                <p>Ofrecemos carreras como Oficial Naval, Infante de Marina Profesional, Suboficial y Marinero. Requisitos: ser colombiano, entre 18-24 años, bachiller. Las convocatorias salen 2 veces al año.</p>
+                <p>Más info: <a href="https://www.armada.mil.co/incorporacion">www.armada.mil.co/incorporacion</a></p>
+            </div>
 
-        <h2>Contacto Armada Nacional</h2>
+            <form class="form-contacto">
+                <h3>Formulario de Contacto Ciudadano</h3>
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="documento">Número de documento:</label>
+                <input type="text" id="documento" name="documento" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+                
+                <label for="asunto">Tipo de solicitud:</label>
+                <select id="asunto" name="asunto">
+                    <option>Información General</option>
+                    <option>Incorporación Servicio Militar</option>
+                    <option>Denuncia Seguridad Marítima</option>
+                    <option>Solicitud Acción Social</option>
+                    <option>PQRS - Petición, Queja, Reclamo</option>
+                </select>
+                
+                <label for="mensaje">Describe tu solicitud:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                
+                <button type="submit">Enviar Mensaje</button>
+                <p class="nota">*Tus datos están protegidos según la Ley 1581 de 2012 de Protección de Datos</p>
+            </form>
+        </div>
+    </main>
 
-        <p>
-            La Armada Nacional de Colombia mantiene diferentes canales
-            de comunicacion para brindar informacion y atencion a la
-            comunidad colombiana.
-        </p>
-
-        <br>
-
-        <p>
-            📧 Correo:
-            contacto@armada.mil.co
-        </p>
-
-        <br>
-
-        <p>
-            📞 Telefono:
-            +57 601 220 0490
-        </p>
-
-        <br>
-
-        <p>
-            📍 Ubicacion:
-            Bogota Colombia
-        </p>
-
-        <br>
-
-        <p>
-            🌐 Pagina oficial:
-            www.armada.mil.co
-        </p>
-
-    </div>
-
-    <div class="imagen-container">
-
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/US_Navy_060511-N-1045B-025_Armada_Republica_Colombia_%28ARC%29_frigate_missile-class_ships_Caldas_%28FM_52%29_and_Atioquia_%28FM_53%29_conducts_a_Group_Sail_Exercise_with_the_George_Washington_Carrier_Strike_Group.jpg"
-        alt="Contacto Armada Colombiana">
-
-    </div>
-
-</section>
+    <footer>
+        <p>© 2026 Armada Nacional de Colombia - Ministerio de Defensa Nacional</p>
+        <p>"Proteger el azul de la bandera es proteger el futuro de Colombia"</p>
+    </footer>
+</body>
+    </html>
