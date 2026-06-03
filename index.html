@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="../Static/style.css">
 </head>
 <body>
+
+    <!-- ===== HEADER ===== -->
     <header>
         <h1>Armada Nacional de Colombia</h1>
         <p class="lema">"Protegiendo la soberanía y los intereses marítimos de la Nación"</p>
+        
+        <!-- Menú de navegación -->
         <nav>
             <ul>
                 <li><a href="index.html" class="activo">Inicio</a></li>
@@ -19,28 +23,48 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
+
+        <!-- Olas animadas - Van aquí, al final del header -->
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+            <defs>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+            </defs>
+            <g class="parallax">
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7)" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#F5F7FA" />
+            </g>
+        </svg>
     </header>
 
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
     <main>
+        
+        <!-- Banner principal -->
         <section class="banner">
             <h2>225 años defendiendo los mares de Colombia</h2>
             <p>La Armada Nacional vigila 928.660 km² de espacios marítimos: 488.000 km² en el Caribe y 440.660 km² en el Pacífico. Somos la única armada de Suramérica con presencia en dos océanos.</p>
             <a href="historia.html" class="btn">Conoce nuestra historia</a>
         </section>
 
+        <!-- Sección ¿Quiénes Somos? -->
         <section class="datos">
             <h2>¿Quiénes Somos?</h2>
             <p>La Armada Nacional es la fuerza naval de la República de Colombia, componente de las Fuerzas Militares. Su función principal es garantizar la defensa y seguridad de los intereses marítimos y fluviales de la nación.</p>
             
+            <!-- Tarjetas informativas -->
             <div class="cards">
                 <div class="card">
                     <h3>🌊 Dos Costas, Un Solo Compromiso</h3>
                     <p>Operamos desde Cartagena en el Caribe hasta Tumaco en el Pacífico. Protegemos rutas comerciales, recursos pesqueros y ecosistemas marinos únicos como el Archipiélago de San Andrés.</p>
                 </div>
+                
                 <div class="card">
                     <h3>⚓ Más de 40.000 Héroes</h3>
                     <p>Contamos con Infantes de Marina, Oficiales, Suboficiales y personal civil. El 30% de nuestro personal son mujeres que hoy lideran buques, helicópteros y operaciones especiales.</p>
                 </div>
+                
                 <div class="card">
                     <h3>🛡️ Misiones Vitales</h3>
                     <p>Combatimos el narcotráfico marítimo, rescatamos pescadores en peligro, protegemos manglares y corales, y llevamos ayuda humanitaria a comunidades costeras aisladas.</p>
@@ -48,6 +72,7 @@
             </div>
         </section>
 
+        <!-- Funciones principales -->
         <section class="noticias">
             <h2>Funciones Principales</h2>
             <ul>
@@ -57,11 +82,14 @@
                 <li><strong>Acción Social:</strong> Brigadas de salud gratuitas llegan cada mes a 120 comunidades del Pacífico y ríos de la Amazonía.</li>
             </ul>
         </section>
+
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer>
         <p>© 2026 Armada Nacional de Colombia - Comando General de las Fuerzas Militares</p>
         <p>Carrera 54 #26-25 CAN, Bogotá D.C. | PBX: (601) 426 1000</p>
     </footer>
+
 </body>
 </html>
