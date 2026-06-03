@@ -1,0 +1,311 @@
+/* ===== ARMADA NACIONAL - ESTILO INSTITUCIONAL CON OLAS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+    --azul-marino: #001F3F;
+    --azul-claro: #0057B8;
+    --dorado: #C9A961;
+    --gris-claro: #F5F7FA;
+    --gris-texto: #333;
+    --blanco: #FFFFFF;
+    --sombra: 0 4px 12px rgba(0, 31, 63, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--gris-texto);
+    background-color: var(--gris-claro);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER CON OLAS ANIMADAS ===== */
+header {
+    background: linear-gradient(135deg, var(--azul-marino) 0%, var(--azul-claro) 100%);
+    color: var(--blanco);
+    padding: 20px 0 80px;
+    position: relative;
+    box-shadow: var(--sombra);
+    overflow: hidden;
+}
+
+header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.lema {
+    text-align: center;
+    font-style: italic;
+    font-size: 0.95rem;
+    margin-top: 5px;
+    color: var(--dorado);
+    font-weight: 300;
+    position: relative;
+    z-index: 2;
+}
+
+/* Olas SVG animadas */
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 1;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% { transform: translate3d(-90px,0,0); }
+    100% { transform: translate3d(85px,0,0); }
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul li a {
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    backdrop-filter: blur(5px);
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--dorado);
+    transform: translateY(-2px);
+}
+
+nav ul li a.activo {
+    background-color: var(--dorado);
+    color: var(--azul-marino);
+    font-weight: 700;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--azul-marino);
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--dorado);
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--azul-claro);
+    margin: 20px 0 10px;
+    font-size: 1.3rem;
+}
+
+/* ===== BANNER ===== */
+.banner {
+    background: linear-gradient(rgba(0, 31, 63, 0.85), rgba(0, 31, 63, 0.85)), 
+                url('images/banner-mar.jpg') center/cover;
+    color: var(--blanco);
+    padding: 80px 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 50px;
+    box-shadow: var(--sombra);
+}
+
+.banner h2 {
+    color: var(--blanco);
+}
+
+.banner h2::after {
+    background: var(--dorado);
+}
+
+.banner p {
+    font-size: 1.2rem;
+    margin: 20px 0 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--dorado);
+    color: var(--azul-marino);
+    padding: 14px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.6);
+}
+
+/* ===== CARDS ===== */
+.cards, .galeria-flota {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.card, .vehiculo {
+    background: var(--blanco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    transition: all 0.4s ease;
+    border-top: 4px solid var(--dorado);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before, .vehiculo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.card:hover::before, .vehiculo:hover::before {
+    left: 100%;
+}
+
+.card:hover, .vehiculo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 31, 63, 0.25);
+}
+
+/* ===== GALERÍA FLOTA ===== */
+.vehiculo img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease;
+}
+
+.vehiculo:hover img {
+    transform: scale(1.05);
+}
+
+/* ===== FORMULARIO ===== */
+.form-contacto button {
+    background: linear-gradient(135deg, var(--azul-marino), var(--azul-claro));
+    color: var(--blanco);
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-contacto button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.form-contacto button:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+footer {
+    background: var(--azul-marino);
+    color: var(--blanco);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+    header h1 { font-size: 1.6rem; }
+    nav ul { flex-direction: column; align-items: center; }
+    .banner { padding: 50px 20px; }
+    .contacto-grid { grid-template-columns: 1fr; }
+  }
